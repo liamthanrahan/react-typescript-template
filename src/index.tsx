@@ -5,9 +5,15 @@ import getRoot from 'get-root'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { BrowserRouter as Router } from 'react-router-dom'
-import Hello from './components/Hello.tsx'
+import Hello from './components/Hello'
+import React = require('react')
 
-const doRender = Component => {
+export interface RenderProps {
+  compiler: string
+  framework: string
+}
+
+const doRender: React.SFC<RenderProps> = Component => {
   render(
     <Router>
       <AppContainer>

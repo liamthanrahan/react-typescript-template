@@ -18,6 +18,7 @@ export default () => {
   return {
     devtool: 'source-map',
     resolve: {
+      extensions: ['.ts', '.tsx', '.js', '.json'],
       modules: [
         path.join(__dirname, 'src'),
         path.join(__dirname, 'node_modules'),
