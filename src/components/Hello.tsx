@@ -1,4 +1,5 @@
 import * as React from 'react'
+import Site from './Site'
 
 export interface HelloProps {
   compiler: string
@@ -6,9 +7,12 @@ export interface HelloProps {
 }
 
 const Hello = (props: HelloProps) => (
-  <h1>
-    Hello from {props.compiler} and {props.framework}!
-  </h1>
+  <div>
+    <h1>
+      Hello from {props.compiler} and {props.framework}!
+    </h1>
+    <Site />
+  </div>
 )
 
 export default Hello
