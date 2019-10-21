@@ -1,19 +1,13 @@
 import 'react-hot-loader/patch'
 
-import React from 'react'
+import React, { FunctionComponent } from 'react'
 import getRoot from 'get-root'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { BrowserRouter as Router } from 'react-router-dom'
-import Hello from './components/Hello'
-import React = require('react')
+import Hello, { HelloProps } from './components/Hello'
 
-export interface RenderProps {
-  compiler: string
-  framework: string
-}
-
-const doRender: React.SFC<RenderProps> = Component => {
+const doRender = (Component: FunctionComponent<HelloProps>): void => {
   render(
     <Router>
       <AppContainer>
